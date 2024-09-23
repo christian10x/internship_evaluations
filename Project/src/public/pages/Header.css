@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+    color: #fff;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.header-logo img {
+    width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto;
+}
+
+.header-university {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+.header-info {
+    text-align: right;
+}
+
+.header-title {
+    font-weight: bold;
+}
+
+.header-student {
+    background-color: #B50C2F;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}

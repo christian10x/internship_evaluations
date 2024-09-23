@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.profile {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    max-height: 600px;
+    margin: 20px auto; /* Centra el card horizontalmente y agrega separación del header */
+    box-sizing: border-box; /* Asegura que el padding esté incluido en el tamaño máximo */
+    font-family: 'Inter', sans-serif; /* Aplica la fuente Inter */
+}
+
+.profile h2 {
+    text-align: center; /* Centra el título */
+}
+
+.profile img {
+    width: 100%;
+    max-width: 160px; /* Tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+}
+
+.profile-info {
+    margin-top: 20px;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.profile-info .credits-title {
+    text-align: center; /* Centra el texto de "Número de créditos" */
+}
+
+.profile-info .credit-item {
+    margin-left: 40px; /* Alinea el texto de "Obligatorios" y "Electivos" con el "N" de "Número de créditos" */
+}
+
+.credit-box {
+    display: inline-block;
+    width: 43px;
+    height: 24px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.credit-box2 {
+    display: inline-block;
+    width: 43px;
+    height: 24px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 5px;
+    margin-left: 44px;
+}

@@ -1,0 +1,219 @@
+/* src/App.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  font-family: Inter, sans-serif;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 1400px;
+}
+
+
+
+.left-panel {
+  width: 30%;
+  float: left;
+}
+
+.right-panel {
+  width: 70%;
+  float: right;
+}
+
+
+
+.enrolled-courses .buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.courses {
+  padding: 8px;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.course-card {
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  border-radius: 8px;
+  padding: 5px;
+  width: 250px;
+  text-align: center;
+}
+
+.course-card h3 {
+  margin: 0;
+}
+
+.course-card p {
+  color: #ffffff;
+}
+
+.course-card .status {
+  display: block;
+  margin-top: 10px;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+}
+
+.course-card .inscrito {
+  font-family: Inter, sans-serif;
+  background-color: green;
+}
+
+.course-card .pendiente {
+  background-color: red;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #b71c1c;
+}
+
+footer {
+  clear: both;
+}
+
+/* Agregar los colores en degradado para el card de cursos matriculados */
+.enrolled-courses {
+  background: linear-gradient(to bottom, #000000, #0C002F);
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Botón para eliminar curso (la "X") */
+.course-card .remove-course {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Botones de "Ver Horario" y "Guardar" */
+.btn {
+  font-family: Inter, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #007523;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #005a1c;
+}
+
+/* Modificación para los cuadros de los cursos matriculados */
+.enrolled-courses .course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.course-card {
+  background: white;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.course-card .course-info {
+  flex: 1;
+}
+
+.course-card .remove-course {
+  cursor: pointer;
+}
+
+.credit-box {
+  display: inline-block;
+  width: 43px;
+  height: 24px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.credit-item {
+  margin-left: 40px;
+}
+
+.enrolled-courses h2 {
+  text-align: center;
+}
+
+.mandatory-courses, .elective-courses {
+  background: linear-gradient(to left, #390210, #9F042C);
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 95%;
+  max-width: 1185px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.mandatory-courses h2, .elective-courses h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 1px;
+}
+
+.mandatory-courses p, .elective-courses p {
+  margin-bottom: 5px; /* Reduce el margen inferior del párrafo */
+}
+.mandatory-courses ul, .elective-courses ul {
+  margin-top: 3px;
+  text-align: left;
+  max-width: 1100px;
+  margin-bottom: 5px;
+}
+
+.mandatory-courses ul, .elective-courses ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+.mandatory-courses ul li, .elective-courses ul li {
+  margin-bottom: 5px;
+}
+
