@@ -16,6 +16,21 @@
 .sidebar {
   flex-shrink: 0;
   position: sticky;
+  transition: transform 0.3s ease-in-out; 
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    transform: translateX(-100%); 
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+  }
+  .open {
+    transform: translateX(0);
+
+  }
 }
 
 .header-main {

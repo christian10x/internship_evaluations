@@ -4,13 +4,23 @@ import { IconHome } from '@tabler/icons-react';
 import { IconBook2 } from '@tabler/icons-react';
 import { IconCalendarMonth } from '@tabler/icons-react';
 import { IconReceipt2 } from '@tabler/icons-react';
+import { IconX } from '@tabler/icons-react';
 
-const Sidebar = ({isOpen}) => {
+const Sidebar = ({isOpen, toggleSidebar }) => {
 
   const location = useLocation();
 
+  const handleLinkClick = () => {
+    if (window.innerWidth < 768) {
+      toggleSidebar();
+    }
+  };
+
   return (
     <div className={`${styles.sidebarContainer} ${isOpen ? styles.open : ""}`}>
+      <div className={styles.iconClose}>
+      <IconX stroke={2} color="white" onClick={handleLinkClick}/>
+      </div>
       <img
         alt="logo"
         src="https://xpedition.utp.edu.pe/wp-content/themes/xpedition/img/logo.png"
@@ -18,7 +28,7 @@ const Sidebar = ({isOpen}) => {
       <ul>
         <li>
         <Link to={`/`}>
-            <div className={`${styles.liContainer} ${location.pathname === "/" ? styles.selected : ""}`}>
+            <div className={`${styles.liContainer} ${location.pathname === "/" ? styles.selected : ""}`} onClick={handleLinkClick}>
             <IconHome className={styles.icon} stroke={2} />
               HOME
             </div>
@@ -26,7 +36,7 @@ const Sidebar = ({isOpen}) => {
         </li>
         <li>
         <Link to={`/cursos`}>
-            <div className={`${styles.liContainer} ${location.pathname === "/cursos" ? styles.selected : ""}`}>
+            <div className={`${styles.liContainer} ${location.pathname === "/cursos" ? styles.selected : ""}`} onClick={handleLinkClick}>
             <IconBook2 className={styles.icon} stroke={2} />
               CURSOS
             </div>
@@ -34,7 +44,7 @@ const Sidebar = ({isOpen}) => {
         </li>
         <li>
         <Link to={`/horario`}>
-            <div className={`${styles.liContainer} ${location.pathname === "/horario" ? styles.selected : ""}`}>
+            <div className={`${styles.liContainer} ${location.pathname === "/horario" ? styles.selected : ""}`} onClick={handleLinkClick}>
             <IconCalendarMonth className={styles.icon} stroke={2} />
               HORARIO
             </div>
@@ -42,7 +52,7 @@ const Sidebar = ({isOpen}) => {
         </li>
         <li>
           <Link to={`/pagos`}>
-            <div className={`${styles.liContainer} ${location.pathname === "/pagos" ? styles.selected : ""}`}>
+            <div className={`${styles.liContainer} ${location.pathname === "/pagos" ? styles.selected : ""}`} onClick={handleLinkClick}>
             <IconReceipt2 className={styles.icon} stroke={2} />
               PAGOS
             </div>

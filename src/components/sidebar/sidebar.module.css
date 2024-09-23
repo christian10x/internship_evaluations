@@ -37,3 +37,22 @@
 .selected {
     background-color: var(--primary-color);
   }
+
+.iconClose{
+    display: none;
+}
+
+  @media (max-width: 768px) {
+    .sidebarContainer {
+        width: auto;
+        text-align: center;
+    }
+    .sidebarContainer img {
+        width: 190px;
+    }
+    .iconClose {
+        display: block;
+        padding: 25px 10px;
+    text-align: end;
+    }
+  }
