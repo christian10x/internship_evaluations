@@ -1,4 +1,12 @@
-# ![UTP Logo](https://res.cloudinary.com/djia8bsvr/image/upload/v1727060006/crwtyws8oaford8wwqd7.png) Sistema de Matrícula en Línea - UTP
+<tr>
+  <div align='center'>
+    <img src="[https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png](https://res.cloudinary.com/djia8bsvr/image/upload/v1727060006/crwtyws8oaford8wwqd7.png)"width="150" height="150">
+    </div>
+</tr>
+ <h1 align="center">Sistema de Matrícula en Línea - UTP
+ </h1>
+
+<p align="center">
 
 ## Proyecto: Desarrollo de Ventanas para Matrícula en Línea
 Este proyecto se enfoca en la creación de una plataforma web moderna y responsiva para la Universidad Tecnológica del Perú (UTP), facilitando la selección de cursos y secciones de manera eficiente y amigable para los estudiantes.
