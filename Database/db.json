@@ -1,0 +1,338 @@
+{
+  "student": {
+    "name": "Victor Raul Herrera Castillo",
+    "career": "Ingeniería de Sistemas",
+    "cycle": "202402",
+    "credits": {
+      "obligatory": 124,
+      "electives": 12
+    },
+    "enrolled_credits": {
+      "obligatory": 12,
+      "electives": 6
+    },
+    "photo": "https://res.cloudinary.com/djia8bsvr/image/upload/v1726960494/lgo85j9pcoqysduke6im.jpg"
+  },
+  "courses": [
+    {
+      "id": "SX569",
+      "name": "Física 2",
+      "type": "Obligatorio",
+      "credits": 4,
+      "status": "Pendiente",
+      "sections": [
+        {
+          "section_id": "A1",
+          "professor": "Dr. Carlos Martínez",
+          "schedule": [
+            {
+              "day": "Lunes",
+              "time": "08:00 - 10:00"
+            },
+            {
+              "day": "Miércoles",
+              "time": "08:00 - 10:00"
+            }
+          ],
+          "mode": "Presencial"
+        },
+        {
+          "section_id": "A2",
+          "professor": "Dra. Ana Salazar",
+          "schedule": [
+            {
+              "day": "Martes",
+              "time": "10:00 - 12:00"
+            },
+            {
+              "day": "Jueves",
+              "time": "10:00 - 12:00"
+            }
+          ],
+          "mode": "Virtual"
+        },
+        {
+          "section_id": "A3",
+          "professor": "Dr. Luis Villanueva",
+          "schedule": [
+            {
+              "day": "Lunes",
+              "time": "10:00 - 12:00"
+            },
+            {
+              "day": "Miércoles",
+              "time": "10:00 - 12:00"
+            }
+          ],
+          "mode": "Presencial"
+        }
+      ]
+    },
+    {
+      "id": "SX569",
+      "name": "Cálculo 2",
+      "type": "Obligatorio",
+      "credits": 3,
+      "status": "Inscrito",
+      "sections": [
+        {
+          "section_id": "B1",
+          "professor": "Ing. Pedro García",
+          "schedule": [
+            {
+              "day": "Lunes",
+              "time": "14:00 - 16:00"
+            },
+            {
+              "day": "Viernes",
+              "time": "14:00 - 16:00"
+            }
+          ],
+          "mode": "Presencial"
+        },
+        {
+          "section_id": "B2",
+          "professor": "Ing. Carmen Mendoza",
+          "schedule": [
+            {
+              "day": "Martes",
+              "time": "08:00 - 10:00"
+            },
+            {
+              "day": "Jueves",
+              "time": "08:00 - 10:00"
+            }
+          ],
+          "mode": "Virtual"
+        }
+      ]
+    },
+    {
+      "id": "TF968",
+      "name": "Fotografía",
+      "type": "Electivo",
+      "credits": 3,
+      "status": "Inscrito",
+      "sections": [
+        {
+          "section_id": "C1",
+          "professor": "Lic. Laura Fernández",
+          "schedule": [
+            {
+              "day": "Miércoles",
+              "time": "18:00 - 20:00"
+            }
+          ],
+          "mode": "Presencial"
+        },
+        {
+          "section_id": "C2",
+          "professor": "Lic. Roberto León",
+          "schedule": [
+            {
+              "day": "Jueves",
+              "time": "18:00 - 20:00"
+            }
+          ],
+          "mode": "Virtual"
+        }
+      ]
+    },
+    {
+      "id": "CS105",
+      "name": "Programación Avanzada",
+      "type": "Obligatorio",
+      "credits": 4,
+      "status": "Pendiente",
+      "sections": [
+        {
+          "section_id": "D1",
+          "professor": "Ing. María López",
+          "schedule": [
+            {
+              "day": "Lunes",
+              "time": "08:00 - 10:00"
+            },
+            {
+              "day": "Miércoles",
+              "time": "08:00 - 10:00"
+            }
+          ],
+          "mode": "Presencial"
+        },
+        {
+          "section_id": "D2",
+          "professor": "Ing. Enrique Vargas",
+          "schedule": [
+            {
+              "day": "Martes",
+              "time": "14:00 - 16:00"
+            },
+            {
+              "day": "Jueves",
+              "time": "14:00 - 16:00"
+            }
+          ],
+          "mode": "Virtual"
+        },
+        {
+          "section_id": "D3",
+          "professor": "Ing. Ana Valdez",
+          "schedule": [
+            {
+              "day": "Lunes",
+              "time": "16:00 - 18:00"
+            },
+            {
+              "day": "Miércoles",
+              "time": "16:00 - 18:00"
+            }
+          ],
+          "mode": "Presencial"
+        }
+      ]
+    },
+    {
+      "id": "MT304",
+      "name": "Matemáticas Discretas",
+      "type": "Obligatorio",
+      "credits": 3,
+      "status": "Pendiente",
+      "sections": [
+        {
+          "section_id": "E1",
+          "professor": "Dr. Julio Herrera",
+          "schedule": [
+            {
+              "day": "Martes",
+              "time": "10:00 - 12:00"
+            },
+            {
+              "day": "Jueves",
+              "time": "10:00 - 12:00"
+            }
+          ],
+          "mode": "Presencial"
+        },
+        {
+          "section_id": "E2",
+          "professor": "Dr. Claudia Paredes",
+          "schedule": [
+            {
+              "day": "Miércoles",
+              "time": "14:00 - 16:00"
+            },
+            {
+              "day": "Viernes",
+              "time": "14:00 - 16:00"
+            }
+          ],
+          "mode": "Virtual"
+        }
+      ]
+    },
+    {
+      "id": "EI709",
+      "name": "Inteligencia Artificial",
+      "type": "Electivo",
+      "credits": 3,
+      "status": "Pendiente",
+      "sections": [
+        {
+          "section_id": "F1",
+          "professor": "Dr. Luis Gómez",
+          "schedule": [
+            {
+              "day": "Lunes",
+              "time": "16:00 - 18:00"
+            },
+            {
+              "day": "Miércoles",
+              "time": "16:00 - 18:00"
+            }
+          ],
+          "mode": "Presencial"
+        },
+        {
+          "section_id": "F2",
+          "professor": "Dra. Pamela Torres",
+          "schedule": [
+            {
+              "day": "Martes",
+              "time": "12:00 - 14:00"
+            },
+            {
+              "day": "Jueves",
+              "time": "12:00 - 14:00"
+            }
+          ],
+          "mode": "Virtual"
+        }
+      ]
+    },
+    {
+      "id": "AD205",
+      "name": "Administración de Empresas",
+      "type": "Electivo",
+      "credits": 3,
+      "status": "Pendiente",
+      "sections": [
+        {
+          "section_id": "G1",
+          "professor": "Lic. Alberto Fernández",
+          "schedule": [
+            {
+              "day": "Lunes",
+              "time": "18:00 - 20:00"
+            }
+          ],
+          "mode": "Presencial"
+        },
+        {
+          "section_id": "G2",
+          "professor": "Lic. Susana Ramos",
+          "schedule": [
+            {
+              "day": "Jueves",
+              "time": "18:00 - 20:00"
+            }
+          ],
+          "mode": "Virtual"
+        }
+      ]
+    },
+    {
+      "id": "MT304",
+      "name": "Ética Profesional",
+      "type": "Obligatorio",
+      "credits": 2,
+      "status": "Pendiente",
+      "sections": [
+        {
+          "section_id": "H1",
+          "professor": "Dr. Rafael Pérez",
+          "schedule": [
+            {
+              "day": "Martes",
+              "time": "08:00 - 10:00"
+            }
+          ],
+          "mode": "Presencial"
+        },
+        {
+          "section_id": "H2",
+          "professor": "Dra. Marcela Díaz",
+          "schedule": [
+            {
+              "day": "Jueves",
+              "time": "10:00 - 12:00"
+            }
+          ],
+          "mode": "Virtual"
+        }
+      ]
+    }
+  ]
+}
+
+

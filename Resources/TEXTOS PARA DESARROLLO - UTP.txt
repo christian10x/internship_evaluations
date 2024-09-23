@@ -1,0 +1,180 @@
+TEXTOS A USAR EN EL DESARROLLO DE LA PLATAFORMA DE MATRICULA EN LINEA
+
+Universidad Tecnologica del Peru
+Matricula en linea UTP - 2024 II
+
+CURSOS OBLIGATORIOS
+Estos cursos forman parte de tu plan de estudios y son necesarios para cumplir con los requisitos de tu carrera. 
+Debes matricularte en todos los cursos obligatorios indicados para este ciclo. 
+Si no seleccionas uno de estos cursos, el sistema no te permitirá avanzar en el proceso de matrícula.
+Recuerda revisar los horarios y seleccionar las secciones disponibles para evitar cruces de horarios.
+
+CURSOS ELECTIVOS
+Los cursos electivos te permiten explorar temas adicionales y complementar tu formación académica. 
+Puedes elegir libremente entre las opciones disponibles, según tu interés y los créditos disponibles en tu plan de estudios.
+Tienes la opción de seleccionar más de un curso electivo, pero asegúrate de que no haya conflictos de horario con tus cursos obligatorios.
+
+Estudiante:
+
+Nombre: Victor Raul Herrera Castillo
+Carrera: Ingeniería de Sistemas
+Ciclo: 202402
+Créditos:
+Obligatorios: 124
+Electivos: 12
+Créditos Matriculados:
+Obligatorios: 12
+Electivos: 6
+Foto: Foto del Estudiante
+Cursos:
+
+Física 2
+
+Tipo: Obligatorio
+Créditos: 4
+Estado: Pendiente
+Secciones:
+A1
+Profesor: Dr. Carlos Martínez
+Horario:
+Lunes: 08:00 - 10:00
+Miércoles: 08:00 - 10:00
+Modalidad: Presencial
+A2
+Profesor: Dra. Ana Salazar
+Horario:
+Martes: 10:00 - 12:00
+Jueves: 10:00 - 12:00
+Modalidad: Virtual
+A3
+Profesor: Dr. Luis Villanueva
+Horario:
+Lunes: 10:00 - 12:00
+Miércoles: 10:00 - 12:00
+Modalidad: Presencial
+Cálculo 2
+
+Tipo: Obligatorio
+Créditos: 3
+Estado: Inscrito
+Secciones:
+B1
+Profesor: Ing. Pedro García
+Horario:
+Lunes: 14:00 - 16:00
+Viernes: 14:00 - 16:00
+Modalidad: Presencial
+B2
+Profesor: Ing. Carmen Mendoza
+Horario:
+Martes: 08:00 - 10:00
+Jueves: 08:00 - 10:00
+Modalidad: Virtual
+Fotografía
+
+Tipo: Electivo
+Créditos: 3
+Estado: Inscrito
+Secciones:
+C1
+Profesor: Lic. Laura Fernández
+Horario:
+Miércoles: 18:00 - 20:00
+Modalidad: Presencial
+C2
+Profesor: Lic. Roberto León
+Horario:
+Jueves: 18:00 - 20:00
+Modalidad: Virtual
+Programación Avanzada
+
+Tipo: Obligatorio
+Créditos: 4
+Estado: Pendiente
+Secciones:
+D1
+Profesor: Ing. María López
+Horario:
+Lunes: 08:00 - 10:00
+Miércoles: 08:00 - 10:00
+Modalidad: Presencial
+D2
+Profesor: Ing. Enrique Vargas
+Horario:
+Martes: 14:00 - 16:00
+Jueves: 14:00 - 16:00
+Modalidad: Virtual
+D3
+Profesor: Ing. Ana Valdez
+Horario:
+Lunes: 16:00 - 18:00
+Miércoles: 16:00 - 18:00
+Modalidad: Presencial
+Matemáticas Discretas
+
+Tipo: Obligatorio
+Créditos: 3
+Estado: Pendiente
+Secciones:
+E1
+Profesor: Dr. Julio Herrera
+Horario:
+Martes: 10:00 - 12:00
+Jueves: 10:00 - 12:00
+Modalidad: Presencial
+E2
+Profesor: Dr. Claudia Paredes
+Horario:
+Miércoles: 14:00 - 16:00
+Viernes: 14:00 - 16:00
+Modalidad: Virtual
+Inteligencia Artificial
+
+Tipo: Electivo
+Créditos: 3
+Estado: Pendiente
+Secciones:
+F1
+Profesor: Dr. Luis Gómez
+Horario:
+Lunes: 16:00 - 18:00
+Miércoles: 16:00 - 18:00
+Modalidad: Presencial
+F2
+Profesor: Dra. Pamela Torres
+Horario:
+Martes: 12:00 - 14:00
+Jueves: 12:00 - 14:00
+Modalidad: Virtual
+Administración de Empresas
+
+Tipo: Electivo
+Créditos: 3
+Estado: Pendiente
+Secciones:
+G1
+Profesor: Lic. Alberto Fernández
+Horario:
+Lunes: 18:00 - 20:00
+Modalidad: Presencial
+G2
+Profesor: Lic. Susana Ramos
+Horario:
+Jueves: 18:00 - 20:00
+Modalidad: Virtual
+Ética Profesional
+
+Tipo: Obligatorio
+Créditos: 2
+Estado: Pendiente
+Secciones:
+H1
+Profesor: Dr. Rafael Pérez
+Horario:
+Martes: 08:00 - 10:00
+Modalidad: Presencial
+H2
+Profesor: Dra. Marcela Díaz
+Horario:
+Jueves: 10:00 - 12:00
+Modalidad: Virtual
