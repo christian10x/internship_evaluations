@@ -4,13 +4,9 @@ import com.trainee.backend.domain.dto.PagoDto;
 import com.trainee.backend.domain.request.PagoRequest;
 import com.trainee.backend.domain.service.PagoService;
 import com.trainee.backend.domain.wrapper.PagoWrapper;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.FieldError;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -26,13 +22,13 @@ public class PagoController {
 
     @PostMapping("/registrar-pago")
     public ResponseEntity<?> registrarPago(@RequestBody List<PagoRequest> newPago) {
-        Map<Integer, Map<String, String>> errores = new HashMap<>();
+        Map<String, Map<String, String>> errores = new HashMap<>();
 
         // Verificar cada pago
         for (int i = 0; i < newPago.size(); i++) {
             Map<String, String> listaDeErrores = pagoService.verificarPago(newPago.get(i));
             if (!listaDeErrores.isEmpty()) {
-                errores.put(i, listaDeErrores);
+                errores.put("pago " + (i+1) , listaDeErrores);
             }
         }
 

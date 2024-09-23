@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "ad214813-2672-4aa2-bb6f-d1c07bfa9109",
+		"name": "xpedition-challenge-cloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32535632"
+	},
+	"item": [
+		{
+			"name": "Alumno",
+			"item": [
+				{
+					"name": "registrar-alumno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": \"100008\",\r\n    \"nombres\": \"Jhon\",\r\n    \"apellidos\": \"Orrego\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://xpedition-challenge-g4bzafb5fja9hbe4.ukwest-01.azurewebsites.net/api/v1/alumnos/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "listar-alumnos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "https://xpedition-challenge-g4bzafb5fja9hbe4.ukwest-01.azurewebsites.net/api/v1/alumnos/all"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pago",
+			"item": [
+				{
+					"name": "registrar-pago",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"alumno\": \"100000\",\r\n    \"cuota\": \"010\",\r\n    \"monto\": \"1900.15\",\r\n    \"fecha_vencimiento\": \"2024-12-21\",\r\n    \"estado\": 0 \r\n    },\r\n    {\r\n    \"alumno\": 100000,\r\n    \"monto\": \"50.00\",  \r\n    \"fecha_vencimiento\": \"2024-12-21\",\r\n    \"cuota\": \"009\",\r\n    \"estado\": \"1\"\r\n}\r\n]       \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://xpedition-challenge-g4bzafb5fja9hbe4.ukwest-01.azurewebsites.net/api/v1/pagos/registrar-pago"
+					},
+					"response": []
+				},
+				{
+					"name": "listar-pagos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": "https://xpedition-challenge-g4bzafb5fja9hbe4.ukwest-01.azurewebsites.net/api/v1/pagos/all"
+					},
+					"response": []
+				},
+				{
+					"name": "listar-pagos-pendientes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://xpedition-challenge-g4bzafb5fja9hbe4.ukwest-01.azurewebsites.net/api/v1/pagos/pendientes",
+							"protocol": "https",
+							"host": [
+								"xpedition-challenge-g4bzafb5fja9hbe4",
+								"ukwest-01",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pagos",
+								"pendientes"
+							],
+							"query": [
+								{
+									"key": "Accept",
+									"value": "application/xml",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

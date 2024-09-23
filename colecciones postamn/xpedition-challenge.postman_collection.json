@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "13243ec7-df6a-40da-8de5-2e09a9981232",
+		"name": "xpedition-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32535632"
+	},
+	"item": [
+		{
+			"name": "Alumno",
+			"item": [
+				{
+					"name": "registrar-alumno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": \"100010\",\r\n    \"nombres\": \"Jhon Ivan\",\r\n    \"apellidos\": \"Orrego Jesus\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/alumnos/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "listar-alumnos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/alumnos/all"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pago",
+			"item": [
+				{
+					"name": "registrar-pago",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"alumno\": \"100000\",\r\n        \"cuota\": \"002\",\r\n        \"monto\": \"900.15\",\r\n        \"fecha_vencimiento\": \"2024-09-21\",\r\n        \"estado\": \"0\"\r\n    },\r\n    {\r\n        \"alumno\": 100000,\r\n        \"monto\": \"50.00\",  \r\n        \"cuota\": \"001\",\r\n        \"fecha_vencimiento\": \"2024-10-21\",\r\n        \"estado\": \"1\"\r\n    }\r\n]       \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/pagos/registrar-pago"
+					},
+					"response": []
+				},
+				{
+					"name": "listar-pagos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/api/v1/pagos/all"
+					},
+					"response": []
+				},
+				{
+					"name": "listar-pagos-pendientes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pagos/pendientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pagos",
+								"pendientes"
+							],
+							"query": [
+								{
+									"key": "Accept",
+									"value": "application/xml",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
