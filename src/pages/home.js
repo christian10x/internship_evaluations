@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "../components/header";
-import Navbar from "../components/navbar";
 import ImageSlider from "../components/imageSlider";
 import Modalidad from "../components/modalidad";
 import CursosCiclo from "../components/cursosCiclo";
@@ -12,9 +10,9 @@ import '../css/homepage.css';
 function HomePage() {
   return (
     <>
-      <Navbar />
+    
       <div className="content">
-        <Header />
+       
         <ImageSlider />
         <div className="main_content">
           <div className="izquierda">
