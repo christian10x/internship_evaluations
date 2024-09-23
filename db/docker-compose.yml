@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres
+    container_name: utpdb
+    environment:
+      - POSTGRES_PASSWORD=utp123
+    ports:
+      - 9988:5432
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
+    driver: local
