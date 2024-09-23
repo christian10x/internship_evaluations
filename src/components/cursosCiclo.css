@@ -1,0 +1,88 @@
+.cursos-ciclo-container {
+    background-color: white;
+    position: relative;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-cursos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #E7EDF2 1px solid;
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 24px;
+    color: #4B4F55;
+    font-weight: bold;
+}
+
+.cursos-ciclo-scroll {
+    display: flex;
+    overflow-x: auto; /* Activamos el scroll horizontal */
+    scroll-snap-type: x mandatory; /* Snap horizontal */
+    padding-bottom: 10px;
+    gap: 10px;
+    white-space: nowrap; /* Evita que el contenido haga saltos de línea */
+    align-items: stretch; /* Asegura que las cajas de los cursos se estiren uniformemente */
+}
+
+.curso {
+    flex: 0 0 25%; /* Los cursos ocupan el 25% del ancho disponible */
+    display: flex; /* Cambia inline-block a flex para que el contenido interno se alinee correctamente */
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido esté distribuido verticalmente */
+    align-items: center; /* Alinea los elementos al centro horizontalmente */
+    background-color: #eaf6ff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 160px;
+    height: 140px;
+    min-width: 140px;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.curso p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+    white-space: normal; /* Permite que el texto se divida en varias líneas si es necesario */
+    overflow: hidden; /* Oculta el texto que se sale del contenedor */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es demasiado largo */
+    max-width: 100%; /* Limita el ancho del texto al tamaño del contenedor */
+}
+
+/* Para asegurar que las etiquetas también se ajusten */
+.curso .label {
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: white;
+    text-align: center;
+    white-space: nowrap; /* Evita que las etiquetas hagan saltos de línea */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Aseguramos que la barra de scroll siempre sea visible */
+.cursos-ciclo-scroll::-webkit-scrollbar {
+    height: 8px;
+    background-color: #f1f1f1;
+}
+
+.cursos-ciclo-scroll::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.cursos-ciclo-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}

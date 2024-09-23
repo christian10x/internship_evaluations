@@ -13,17 +13,22 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="main_content">
+      <div className="content">
         <Header />
         <ImageSlider />
         <Modalidad />
-        <CursosCiclo />
-        <ResumenGeneral />
-        <Interes />
-        <Horario />
+        
+        <div className="main-content">
+          <div className="izquierda">
+            <CursosCiclo />
+            <ResumenGeneral />
+          </div>
+          <div className="derecha">
+            <Interes />
+            <Horario />
+          </div>
+        </div>
       </div>
-      
-      
     </>
   );
 }
