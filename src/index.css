@@ -1,0 +1,158 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0 0 50px 0;
+}
+
+.header-utp {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 40px 20px 40px;
+  background-color: black;
+  width: 100%;
+  top: 0;
+}
+
+.header-utp h1 {
+  color: white;
+  margin: 0.5%;
+  width: 100%;
+}
+
+.logo-utp {
+  height: 50px;
+}
+
+.listado {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.tabla-titulo {
+  padding: 5px 25px;
+  border-bottom-style: solid;
+}
+
+.listado table {
+  border-spacing: 0;
+  border-radius: 15px;
+  border-collapse: collapse;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.listado table tr:not(tr:first-child) {
+  border-bottom: 0.15rem solid #dddddd;
+}
+
+.listado table tr:last-of-type{
+  border-bottom: 0.2rem solid #009879 !important;
+}
+
+.listado table tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.listado th {
+  background-color: #009879;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.listado th, td {
+  padding: 0.8rem 2rem 0.8rem 2rem;
+}
+
+.listado-horario th {
+  padding: 5px 20px;
+}
+
+.listado-horario td{
+  text-align: center;
+  padding: 0;
+}
+
+.tr_centrar td {
+  text-align: center;
+}
+
+.td_centrar {
+  text-align: center;
+  padding: 0.8rem 2rem;
+}
+
+.td_cruceHorario {
+  color: #cd1f48;
+  font-weight: bold;
+}
+
+.nota {
+  color: #cd1f48;
+  font-weight: bold;
+  font-size: small;
+}
+
+.btn {
+  margin-top: 30px;
+}
+
+.datos {
+  margin: 0;
+}
+
+.datos-bottom {
+  margin-bottom: 25px;
+}
+
+a {
+  text-decoration: inherit;
+  color: #ffffff;
+}
+
+table a {
+  font-weight: 600;
+  color: #646cff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #484ebd;
+  transition: 1s;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #000000;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+  background-color: #ffffff;
+  transition: 1s;
+}
+
+button a{
+  display: inline-block;
+  padding: 0.6em 1.2em;
+}

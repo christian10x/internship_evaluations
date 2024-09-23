@@ -1,0 +1,110 @@
+[
+  {
+    "id_curso": 10001,
+    "curso": "Cálculo 1",
+    "secciones":
+    [
+      {
+        "id_seccion": "101",
+        "horario": {
+          "lunes": "7-9",
+          "martes": "-",
+          "miercoles": "7-10",
+          "jueves": "-",
+          "viernes": "-",
+          "sabado": "-"
+        }
+      },
+      {
+        "id_seccion": "102",
+        "horario": {
+          "lunes": "9-11",
+          "martes": "-",
+          "miercoles": "-",
+          "jueves": "-",
+          "viernes": "7-10",
+          "sabado": "-"
+        }
+      },
+      {
+        "id_seccion": "103",
+        "horario": {
+          "lunes": "-",
+          "martes": "11-13",
+          "miercoles": "-",
+          "jueves": "10-13",
+          "viernes": "-",
+          "sabado": "-"
+        }
+      }
+    ]
+  },
+  {
+    "id_curso": 10002,
+    "curso": "Economía y Empresa",
+    "secciones": null
+  },
+  {
+    "id_curso": 10003,
+    "curso": "Lenguaje y Comunicación",
+    "secciones" :
+    [
+      {
+        "id_seccion": 301,
+        "horario": {
+          "lunes": "-",
+          "martes": "14-16",
+          "miercoles": "15-17",
+          "jueves": "-",
+          "viernes": "-",
+          "sabado": "-"
+        }
+      },
+      {
+        "id_seccion": 302,
+        "horario": {
+          "lunes": "-",
+          "martes": "-",
+          "miercoles": "-",
+          "jueves": "7-9",
+          "viernes": "-",
+          "sabado": "10-12"
+        }
+      },
+      {
+        "id_seccion": 303,
+        "horario": {
+          "lunes": "-",
+          "martes": "11-13",
+          "miercoles": "-",
+          "jueves": "13-15",
+          "viernes": "-",
+          "sabado": "-"
+        }
+      }
+    ]
+  },
+  {
+    "id_curso": 10004,
+    "curso": "Simulación 1",
+    "secciones":
+    [
+      {
+        "id_seccion" : 401,
+        "horario": {
+          "lunes": "-",
+          "martes": "-",
+          "miercoles": "8-10",
+          "jueves": "-",
+          "viernes": "8-10",
+          "sabado": "-"
+        }
+      }
+    ]
+  },
+  {
+    "id_curso": 10005,
+    "curso": "Física 1",
+    "secciones": null
+  }
+]

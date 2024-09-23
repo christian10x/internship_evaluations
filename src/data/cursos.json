@@ -1,0 +1,37 @@
+[
+  {
+    "id_curso": 10001,
+    "nombre_curso": "Cálculo 1",
+    "n_creditos": "5",
+    "tipo": "Obligatorio",
+    "secciones": 3
+  },
+  {
+    "id_curso": 10002,
+    "nombre_curso": "Economía y Empresa",
+    "n_creditos": "3",
+    "tipo": "Electivo",
+    "secciones": 0
+  },
+  {
+    "id_curso": 10003,
+    "nombre_curso": "Lenguaje y Comunicación",
+    "n_creditos": "3",
+    "tipo": "Obligatorio",
+    "secciones": 3
+  },
+  {
+    "id_curso": 10004,
+    "nombre_curso": "Simulación 1",
+    "n_creditos": "3",
+    "tipo": "Electivo",
+    "secciones": 1
+  },
+  {
+    "id_curso": 10005,
+    "nombre_curso": "Física 1",
+    "n_creditos": "4",
+    "tipo": "Obligatorio",
+    "secciones": 0
+  }
+]
