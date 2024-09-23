@@ -1,27 +1,23 @@
 # Xpedition Trainee Challenge
 
-## Inventario de librerias
+**Postulante:** Orrego Jesus, Jhon Ivan  
+**Fecha:** 23/09/2024
 
-### Java 17
+Este repositorio contiene el proyecto correspondiente al reto técnico de **registro de pagos de una universidad**.
 
-## Descripción de casos de uso
+## Tecnologías utilizadas
+- **Java**
+- **Spring Boot**
+- **PostgreSQL**
 
-### CU-001: Registrar Alumno
+## Instrucciones de ejecución
 
-Este caso de uso permite registrar un nuevo alumno. Los datos del alumno se envúan en formato JSON.
+### Colecciones Postman
+Se han adjuntado colecciones Postman para facilitar la ejecución de las API, tanto en un entorno local como en la nube.
 
-### CU-002: Registrar Pagos
+- **Ejecución local:** colecciones postman/xpedition-challenge.postman_collection.json
+- **Ejecución en la nube:** colecciones postman/xpedition-challenge-cloud.postman_collection.json
 
-Este caso de uso permite registrar un nuevo pago asociado a un alumno a través de la nueva plataforma. Los datos del pago se envían en formato JSON y se almacenan en la base de datos.
+## Documentación
 
-### CU-003: Consultar Pagos
-
-Este caso de uso permite obtener todos los pagos de la base de dato. Los datos de pago se pueden obtener en formato JSON o XML
-
-### CU-004: Consultar pagos pendientes
-
-Este caso de uso permite obtener todos los pagos pendientes de los alumnos en formato XML para que puedan ser enviados a las plataforma de los bancos.
-
-
-
-
+La documentación solicitada para este reto también se encuentra adjunta en el repositorio.
