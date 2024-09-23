@@ -1,0 +1,17 @@
+meta {
+  name: Update a Section
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:4000/api/v1/sections/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "A01"
+  }
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Create a Section
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:4000/api/v1/sections
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "C"
+  }
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Update a Role
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:4000/api/v1/roles/3
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "ESTUDIANTE"
+  }
+}

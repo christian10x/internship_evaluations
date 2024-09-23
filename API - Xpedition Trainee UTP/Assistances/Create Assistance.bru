@@ -1,0 +1,21 @@
+meta {
+  name: Create Assistance
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:4000/api/v1/assistances
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "alumnoId": 8,
+    "cursoId": 9,
+    "seccionId": 7,
+    "sesion": 1,
+    "asistencia": 1
+  }
+}

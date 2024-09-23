@@ -74,6 +74,15 @@
 9. La Colección de API's estará disponible en la carpeta `API - Xpedition Trainee UTP` en la raíz del proyecto.
    Se recomienda importar la colección en [bruno](https://www.usebruno.com) para probar las API's.
 
+## Documentación
+
+La documentación estará disponible en la carpeta `DOCUMENTOS` en la raíz del proyecto. El cual está estructurado de la siguiente manera:
+
+- `CASOS DE USO`
+- `DIAGRAMA DE PROCESOS`
+- `DIAGRAMA DE ENTIDAD RELACIÓN`
+- `DICCIONARIO DE DATOS`
+
 ## Captura de Pantalla
 
 ![API Xpedition Trainee UTP](image.png)
