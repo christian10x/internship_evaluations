@@ -18,6 +18,7 @@ Este proyecto se enfoca en la creación de una plataforma web moderna y responsi
     <img src="https://res.cloudinary.com/djia8bsvr/image/upload/v1726960494/lgo85j9pcoqysduke6im.jpg"width="150" height="150">
     </div>
 </tr>
+
 **Nombre:** Victor Raul Herrera Castillo  
 **Correo Electrónico:** vr.herrera.c@gmail.com  
 **Celular:** +51 944073494
