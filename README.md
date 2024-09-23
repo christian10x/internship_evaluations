@@ -3,6 +3,10 @@
 
 Este proyecto es una aplicación de React que utiliza Tailwind CSS para el diseño, React Router Dom para el manejo de rutas, Lucide React y React Icons para los íconos. Este archivo README te guiará en los pasos necesarios para ejecutar este proyecto localmente.
 
+# StoryBoard
+
+- [StoryBoard del aplicativo UTP + Portal](https://www.canva.com/design/DAGRlzNsCBk/yKR5SEGE2vTcIwkgdp2S7A/edit?utm_content=DAGRlzNsCBk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ## Requisitos previos
 
 Antes de comenzar, asegúrate de tener lo siguiente instalado en tu entorno:
