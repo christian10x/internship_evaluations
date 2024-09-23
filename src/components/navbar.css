@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap');
 
-menu {
+/* Estructura del navbar */
+.navbar {
   position: fixed;
   background-color: #070937;
   width: 80px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-menu div, menu a{
+.navbar-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,37 +19,42 @@ menu div, menu a{
   width: 100%;
   height: 80px;
   transition: background-color 0.3s;
-}
-
-menu a:hover, menu p:hover, menu a p:hover:not(.active)  {
-  background-color: #1B2E62;
-}
-
-menu a:hover:not(.active), 
-menu p:hover:not(.active) {
-  background-color: #1B2E62;
-}
-
-menu a:first-of-type {
-  background-color: #F0F6FF;
-}
-
-menu a:first-of-type i,
-menu a:first-of-type p {
-  color: #070937;
-}
-
-menu i {
-  font-size: 2rem;
+  text-decoration: none;
   color: white;
 }
 
-menu p {
+/* Efecto hover */
+.navbar-item:hover {
+  background-color: #1B2E62;
+}
+
+/* Estilos para los íconos */
+.navbar-item i {
+  font-size: 1.4rem;
+  color: white;
+}
+
+/* Estilos para el texto */
+.navbar-item p {
   font-size: 12px;
   padding-top: 5px;
   color: white;
+  margin: 0;
 }
 
-menu i{
-    font-size: 1.4rem;
+/* Elemento activo con fondo celeste */
+.navbar-item.active {
+  background-color: #F0F6FF; /* Fondo celeste claro para el ítem activo */
+  color: #070937; /* Texto e ícono en color oscuro */
+}
+
+.navbar-item.active i,
+.navbar-item.active p {
+  color: #070937; /* Cambia el color de los íconos y el texto cuando está activo */
+}
+
+/* Hover sobre el texto que no sea activo */
+.navbar-item:hover:not(.active) i,
+.navbar-item:hover:not(.active) p {
+  color: #fff; /* Mantiene el color blanco en hover si no está activo */
 }
