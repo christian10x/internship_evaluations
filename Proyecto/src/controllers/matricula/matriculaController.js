@@ -57,7 +57,7 @@ export default {
 
           if (!cursoHorarioDocente) {
             return res.status(404).send({
-              message: `No se encontró el horario para el curso ${cursoNombre}`,
+              message: `No se encontro el horario para el curso ${cursoNombre}`,
             });
           }
 
@@ -71,12 +71,12 @@ export default {
         }
       }
 
-      return res.status(200).send({ message: "Matrícula realizada con éxito" });
+      return res.status(200).send({ message: "Matricula realizada con exito" });
     } catch (error) {
       console.error(error);
       return res
         .status(500)
-        .send({ message: "Error al realizar la matrícula" });
+        .send({ message: "Error al realizar la matricula" });
     }
   },
 
@@ -134,7 +134,6 @@ export default {
     const { AlumnoId } = req.query;
   
     try {
-      // Consultar los detalles de la matrícula que incluyen curso, docente y horario
       const matriculaDetalles = await MatriculaDetalle.findAll({
         include: [
           {
@@ -145,16 +144,16 @@ export default {
             model: CursosXDocenteXHorario,
             include: [
               {
-                model: CursosXDocente, // Relación con CursosXDocente para obtener el curso
+                model: CursosXDocente, 
                 include: [
                   {
-                    model: Cursos, // Obtener el curso relacionado
-                    attributes: ['CURSO_NOMBRE'], // Obtener solo el nombre del curso
+                    model: Cursos, 
+                    attributes: ['CURSO_NOMBRE'], 
                   },
                 ],
               },
               {
-                model: Horarios, // Relación con horarios
+                model: Horarios,
                 attributes: ['DIA', 'HORA_INICIO', 'HORA_FIN'],
               },
             ],
@@ -162,13 +161,12 @@ export default {
         ],
       });
   
-      // Transformar los datos obtenidos en el formato requerido
       const cursosConHorarios = matriculaDetalles.map((detalle) => {
         const cursoHorario = detalle.CursosXDocenteXHorario;
   
         if (cursoHorario && cursoHorario.Horario && cursoHorario.CursosXDocente.Curso) {
           return {
-            nombreCurso: cursoHorario.CursosXDocente.Curso.CURSO_NOMBRE, // Nombre del curso
+            nombreCurso: cursoHorario.CursosXDocente.Curso.CURSO_NOMBRE, 
             dia: cursoHorario.Horario.DIA,
             horaInicio: cursoHorario.Horario.HORA_INICIO,
             horaFin: cursoHorario.Horario.HORA_FIN,
