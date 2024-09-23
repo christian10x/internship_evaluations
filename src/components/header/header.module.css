@@ -1,30 +1,30 @@
 .header {
-    background-color: var(--white-color);
-    min-height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 5px 15px;
+  background-color: var(--white-color);
+  min-height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 15px;
 }
 
 p {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .iconMenu {
-    display: none;
+  display: none;
 }
 
 .user {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
-    .iconMenu {
-      display: block;
-    }
-    .header {
-        justify-content: space-between;
-    }
+  .iconMenu {
+    display: block;
   }
+  .header {
+    justify-content: space-between;
+  }
+}

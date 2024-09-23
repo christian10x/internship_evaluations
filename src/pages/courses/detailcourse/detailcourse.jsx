@@ -54,37 +54,36 @@ const Detailcourse = () => {
           <div className={styles.left}>
             <h3>Mis calificaciones</h3>
             <div className="gradesContainer">
-            <div className={styles.formula}>
-              <p>Formula: {course.grades.formula}</p>
-            </div>
-            <div className={styles.leftright && styles.gradesContainer}>
-              <div className={styles.grades}>
-                <div>
-                  <p>Practica Calificada 1:</p>
-                  <p>Practica Calificada 2:</p>
-                  <p>Practica Calificada 3:</p>
-                  <p>Examen Final:</p>
-                </div>
-                <div>
-                  <p>{course.grades.pc1}</p>
-                  <p>{course.grades.pc2}</p>
-                  <p>{course.grades.pc3}</p>
-                  <p>{course.grades.ef}</p>
-                </div>
+              <div className={styles.formula}>
+                <p>Formula: {course.grades.formula}</p>
               </div>
-              <div>
-                <div className={styles.finalGrade}>
+              <div className={styles.leftright && styles.gradesContainer}>
+                <div className={styles.grades}>
                   <div>
-                    <h2>{course.grades.final_grade}</h2>
+                    <p>Practica Calificada 1:</p>
+                    <p>Practica Calificada 2:</p>
+                    <p>Practica Calificada 3:</p>
+                    <p>Examen Final:</p>
                   </div>
                   <div>
-                    <p>NOTA FINAL</p>
-                    <p>{course.grades.status}</p>
+                    <p>{course.grades.pc1}</p>
+                    <p>{course.grades.pc2}</p>
+                    <p>{course.grades.pc3}</p>
+                    <p>{course.grades.ef}</p>
+                  </div>
+                </div>
+                <div>
+                  <div className={styles.finalGrade}>
+                    <div>
+                      <h2>{course.grades.final_grade}</h2>
+                    </div>
+                    <div>
+                      <p>NOTA FINAL</p>
+                      <p>{course.grades.status}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
             </div>
           </div>
 

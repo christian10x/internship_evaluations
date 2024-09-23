@@ -14,16 +14,16 @@
 
 .sidebar {
   position: fixed;
-    transition: transform 0.3s ease-in-out;
-    z-index: 5;
-    height: 100%;
+  transition: transform 0.3s ease-in-out;
+  z-index: 5;
+  height: 100%;
 }
 
 .header-main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  height: 100vh; 
+  height: 100vh;
   padding-left: 190px;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .main::-webkit-scrollbar-track {
-  background: var(--bg-color); 
+  background: var(--bg-color);
 }
 
 .main::-webkit-scrollbar-thumb {
@@ -52,14 +52,13 @@
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
-    transform: translateX(-100%); 
+    transform: translateX(-100%);
     height: 100%;
     width: 100%;
     z-index: 10000;
   }
   .open {
     transform: translateX(0);
-
   }
   .header-main {
     padding-left: 0;

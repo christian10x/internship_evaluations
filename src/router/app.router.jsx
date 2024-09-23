@@ -7,12 +7,47 @@ import SchedulePage from "../pages/schedule/schedule";
 
 const AppRouter = () => {
   const routes = [
-    { path: "/", element: <div className="container"><Home></Home></div> },
+    {
+      path: "/",
+      element: (
+        <div className="container">
+          <Home></Home>
+        </div>
+      ),
+    },
     { path: "*", element: <Navigate to={"/"}></Navigate> },
-    { path: "/cursos", element: <div className="container"><Courses></Courses></div> },
-    { path: "/cursos/:id", element: <div className="container"><Detailcourse></Detailcourse></div> },
-    { path: "/horario", element: <div className="container"><SchedulePage></SchedulePage></div> },
-    { path: "/pagos", element: <div className="container"><Payments></Payments></div> },
+    {
+      path: "/cursos",
+      element: (
+        <div className="container">
+          <Courses></Courses>
+        </div>
+      ),
+    },
+    {
+      path: "/cursos/:id",
+      element: (
+        <div className="container">
+          <Detailcourse></Detailcourse>
+        </div>
+      ),
+    },
+    {
+      path: "/horario",
+      element: (
+        <div className="container">
+          <SchedulePage></SchedulePage>
+        </div>
+      ),
+    },
+    {
+      path: "/pagos",
+      element: (
+        <div className="container">
+          <Payments></Payments>
+        </div>
+      ),
+    },
   ];
   return useRoutes(routes);
 };

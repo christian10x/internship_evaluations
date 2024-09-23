@@ -1,14 +1,14 @@
 :root {
-  --primary-color: #5F2DED;
-  --secondary-color: #0C0E2B;
-  --white-color: #FFFF;
+  --primary-color: #5f2ded;
+  --secondary-color: #0c0e2b;
+  --white-color: #ffff;
   --black-color: #000000;
-  --red-color: #FF0000;
-  --green-color: #19D907;
-  --orange-color: #ECBF0B;
-  --bg-color: #F5F5F5;
+  --red-color: #ff0000;
+  --green-color: #19d907;
+  --orange-color: #ecbf0b;
+  --bg-color: #f5f5f5;
 
-  --primary-font: 'Poppins', sans-serif ;
+  --primary-font: "Poppins", sans-serif;
 }
 
 * {
@@ -34,14 +34,15 @@ h3 {
   font-size: 16px;
 }
 
-p, span, a {
+p,
+span,
+a {
   font-size: 13px;
 }
 
 .container {
   padding: 40px;
   overflow-y: auto;
-  
 }
 
 .button-primary {
@@ -77,7 +78,7 @@ p, span, a {
   border-radius: 5px;
   padding: 5px;
 }
-#red-container p{
+#red-container p {
   padding: 0;
 }
 
@@ -87,7 +88,7 @@ p, span, a {
   border-radius: 5px;
   padding: 5px;
 }
-#green-container p{
+#green-container p {
   padding: 0;
 }
 
@@ -97,24 +98,26 @@ p, span, a {
   border-radius: 5px;
   padding: 5px;
 }
-#orange-container p{
+#orange-container p {
   padding: 0;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   h1 {
     font-size: 24px;
   }
-  
+
   h2 {
     font-size: 20px;
   }
-  
+
   h3 {
     font-size: 15px;
   }
-  
-  p, span, a {
+
+  p,
+  span,
+  a {
     font-size: 12px;
   }
 }

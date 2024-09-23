@@ -1,14 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
-import styles from "./courses.module.css"
+import styles from "./courses.module.css";
 import { getCourses } from "../../services/course/course";
 import { Link } from "react-router-dom";
 import CircularProgressBar from "../../components/circle-progress-bar/circle-progress-bar";
 import { useState } from "react";
-import { IconArrowRight } from '@tabler/icons-react';
+import { IconArrowRight } from "@tabler/icons-react";
 
 const Courses = () => {
-    
-    const [isHovered, setIsHovered] = useState(null);
+  const [isHovered, setIsHovered] = useState(null);
 
   const {
     isLoading,
@@ -22,7 +21,7 @@ const Courses = () => {
   if (isLoading) return <p>Cargando cursos...</p>;
 
   if (error) return <p>Error: {error.message}</p>;
-  
+
   return (
     <div className={styles.courses}>
       <div>
@@ -30,8 +29,12 @@ const Courses = () => {
       </div>
       <div className={styles.cardsContainer}>
         {courses.map((course) => (
-          <div className={styles.card} key={course.id} onMouseEnter={() => setIsHovered(course.id)}
-          onMouseLeave={() => setIsHovered(null)}>
+          <div
+            className={styles.card}
+            key={course.id}
+            onMouseEnter={() => setIsHovered(course.id)}
+            onMouseLeave={() => setIsHovered(null)}
+          >
             <div>
               <h3>{course.name}</h3>
               <p>Docente: {course.teacher}</p>
@@ -41,14 +44,20 @@ const Courses = () => {
               <Link to={`/cursos/${course.id}`}>
                 <div className={styles.seeCourse}>
                   <span>Ver curso</span>
-                  <IconArrowRight className={styles.icon} stroke={1.5} size={20} />
+                  <IconArrowRight
+                    className={styles.icon}
+                    stroke={1.5}
+                    size={20}
+                  />
                 </div>
               </Link>
               <CircularProgressBar
                 value={course.grade}
                 text={course.grade + "NF"}
                 size={50}
-                color={isHovered === course.id ? '#FFFF' : 'var(--primary-color)'}
+                color={
+                  isHovered === course.id ? "#FFFF" : "var(--primary-color)"
+                }
               />
             </div>
           </div>

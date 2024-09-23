@@ -65,9 +65,8 @@ const Home = () => {
                     </div>
                   </div>
                   <div>
-                  <Link to={`/horario`}>
-                  
-                    <button className="button-primary">Ver horario</button>
+                    <Link to={`/horario`}>
+                      <button className="button-primary">Ver horario</button>
                     </Link>
                   </div>
                 </div>
@@ -87,33 +86,45 @@ const Home = () => {
                   <p id="red">Cuotas vencidas: {user.account.expire}</p>
                 </div>
                 <div>
-                <Link to={`/pagos`}>
-                  <button className="button-primary">Ver estado</button>
+                  <Link to={`/pagos`}>
+                    <button className="button-primary">Ver estado</button>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
           <div className={styles.right}>
-          <div >
+            <div>
               <div className={styles.subtitle}>
                 <h3>Historial de calificaciones</h3>
               </div>
               {grades.map((grade) => (
-              <div className={styles.dataSchedule} key={grade.id}>
-                <div className={styles.leftright}>
-                <div>
-                  <h4>{grade.name}</h4>
-                  <p id="primary-color">{grade.course.name}</p>
-                  <p>Nota: {grade.grade}</p>
+                <div className={styles.dataSchedule} key={grade.id}>
+                  <div className={styles.leftright}>
+                    <div>
+                      <h4>{grade.name}</h4>
+                      <p id="primary-color">{grade.course.name}</p>
+                      <p>Nota: {grade.grade}</p>
+                    </div>
+                    <div>
+                      {grade.status.id === "1" && (
+                        <div id="green-container">
+                          <p>{grade.status.name}</p>
+                        </div>
+                      )}
+                      {grade.status.id === "2" && (
+                        <div id="orange-container">
+                          <p>{grade.status.name}</p>
+                        </div>
+                      )}
+                      {grade.status.id === "3" && (
+                        <div id="red-container">
+                          <p>{grade.status.name}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  {grade.status.id === '1' && <div id="green-container"><p>{grade.status.name}</p></div>}
-                  {grade.status.id === '2' && <div id="orange-container"><p>{grade.status.name}</p></div>}
-                  {grade.status.id === '3' && <div id="red-container"><p>{grade.status.name}</p></div>}
-                </div>
-                </div>
-              </div>
               ))}
             </div>
           </div>
