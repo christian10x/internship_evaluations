@@ -8,7 +8,7 @@ const PreguntaCheckBox = ({ pregunta, opciones, onChange, value }) => {
   const sanitize = (text) => DOMPurify.sanitize(text);
 
   useEffect(() => {
-    // Update local state if the value prop changes
+    // Update local state
     setSelectedOptions(value || []);
   }, [value]);
 

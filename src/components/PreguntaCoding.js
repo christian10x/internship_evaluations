@@ -3,7 +3,7 @@ import DOMPurify from 'dompurify';
 import '../styles/PreguntaCoding.css';
 
 const PreguntaCoding = ({ pregunta, onChange, value }) => {
-  const [codigo, setCodigo] = useState(value || ''); // Initialize with the passed value
+  const [codigo, setCodigo] = useState(value || '');
 
   const handleChange = (e) => {
     const rawInput = e.target.value;

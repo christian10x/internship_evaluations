@@ -101,7 +101,7 @@ function Examen() {
 
                     <div className='pregunta-container'>
                         <PreguntaTextBoxNoFormat 
-                            pregunta="Ingresa tu nombre:" 
+                            pregunta="¿Por qué quiere trabajar en Xpedition?:" 
                             onChange={handleTextBoxNoFormatChange}
                             value={formData.textBoxNoFormatContent}
                         />

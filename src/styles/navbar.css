@@ -70,7 +70,6 @@ ul li a:hover, ul li a.active {
 }
 
 
-/* Responsive design */
 @media screen and (max-width: 768px) {
   .SideBar {
     width: 60%;

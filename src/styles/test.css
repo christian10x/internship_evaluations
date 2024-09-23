@@ -20,7 +20,7 @@
 
 .test-title {
   margin-left: 5%;
-  font-size: 1.2rem; /* Add this line */
+  font-size: 1.2rem; 
 }
 
 .test-button {
@@ -38,7 +38,7 @@
   font-size: 1rem;
 }
 
-/* Add media queries for responsiveness */
+
 @media screen and (max-width: 768px) {
   .test-content {
     flex-direction: column;
