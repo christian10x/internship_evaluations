@@ -1,0 +1,36 @@
+/* src/components/resumenGeneral.css */
+
+.resumen-general {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Suave sombra */
+    font-family: Arial, sans-serif;
+}
+
+.resumen-general h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.resumen-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resumen-left, .resumen-right {
+    width: 48%;
+}
+
+.resumen-left p, .resumen-right p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+p {
+    margin: 5px 0;
+}
