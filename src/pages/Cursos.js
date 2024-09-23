@@ -1,6 +1,6 @@
-import './Cursos.css';
-import Card from './components/card';
-import TopBar from './components/topbar';
+import '../pagesstyles/Cursos.css';
+import Card from '../components/card';
+import TopBar from '../components/topbar';
 
 function Cursos() {
   return (

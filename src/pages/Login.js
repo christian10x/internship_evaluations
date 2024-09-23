@@ -1,8 +1,8 @@
 import React from 'react'
-import './Login.css'
-import logo from './images/logoalter.png'
+import '../pagesstyles/Login.css'
+import logo from '../images/logoalter.png'
 import { useNavigate } from 'react-router-dom';
-import examen from './images/imagenexamen.png'
+import examen from '../images/imagenexamen.png'
 
 const Login = () => {
   const navigate = useNavigate();

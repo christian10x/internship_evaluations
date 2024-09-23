@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Cursos from './Cursos'; 
-import Especifico from './Especifico'; 
-import Examen from './Examen'; 
-import Login from './Login';
+import Cursos from './pages/Cursos'; 
+import Especifico from './pages/Especifico'; 
+import Examen from './pages/Examen'; 
+import Login from './pages/Login';
 const App = () => {
   return (
     <Routes>
