@@ -9,20 +9,20 @@ function Navbar() {
                 <i class="fa-solid fa-bars"></i>
             </div>
 
-            <a href="index.html" className="navbar-item home active">
+            <Link to="/home" className="navbar-item home active">
                 <i class="fa-solid fa-house"></i>
-                <Link src="/src/pages/home.js" className="active">Inicio</Link>
-            </a>
+                <p className="active">Inicio</p>
+            </Link>
 
-            <a href="calendario.html" class="navbar-item">
+            <Link to="/calendar" class="navbar-item">
                 <i class="fa-solid fa-calendar"></i>
-                <Link to="/calendar"z>Calendario</Link>
-            </a>
+                <p>Calendario</p>
+            </Link>
 
-            <a href="cursos.html" class="navbar-item">
+            <Link to="/courses" class="navbar-item">
                 <i class="fa-solid fa-book"></i>
                 <p>Cursos</p>
-            </a>
+            </Link>
 
             <a href="pagos.html" class="navbar-item">
                 <i class="fa-solid fa-house"></i>

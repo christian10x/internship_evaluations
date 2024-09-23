@@ -1,0 +1,32 @@
+/* src/App.css */
+
+.course-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .course-card h2 {
+    margin: 0 0 10px;
+  }
+  
+  .evaluations, .attendance {
+    margin-top: 20px;
+  }
+  
+  .attendance {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+  

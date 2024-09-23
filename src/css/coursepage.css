@@ -1,0 +1,82 @@
+/* src/css/CoursesPage.css */
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Contenedor principal */
+  /* src/css/CoursesPage.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estructura de dos columnas */
+  .courses-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  /* Columna izquierda para detalles del curso */
+  .courses-details {
+    flex: 2;
+  }
+  
+  /* Columna derecha para gráfico de torta */
+  .attendance-chart {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .course-card h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #0056b3;
+    cursor: pointer;
+  }
+  
+  .course-details {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  
