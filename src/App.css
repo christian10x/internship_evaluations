@@ -1,0 +1,48 @@
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-schedule/styles/material.css";
+
+.app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  position: sticky;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh; 
+}
+
+.main {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.main::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: var(--bg-color); 
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: #acafd6;
+  border-radius: 6px;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: #d6d8f5;
+}

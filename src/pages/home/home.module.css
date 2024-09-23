@@ -1,0 +1,91 @@
+.infoCard {
+    background-color: var(--white-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+.infoCard img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.info {
+    padding: 0 15px;
+}
+
+.leftright {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: center;
+}
+
+.subtitle {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.subtitle h3 {
+    font-weight: 400;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+.dataSchedule {
+    background-color: var(--white-color);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.dataAccount {
+    background-color: var(--white-color);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dataSchedule h4 {
+    font-weight: 600;
+}
+
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.left, .right {
+    width: 50%;
+}
+
+#up{
+    align-items: flex-start;
+}
+
+@media (max-width: 768px){
+    .leftright{
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 100%;
+    }
+    .dataAccount {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}

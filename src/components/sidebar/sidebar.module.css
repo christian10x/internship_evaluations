@@ -1,0 +1,39 @@
+.sidebarContainer {
+    width: 190px;
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+
+.sidebarContainer img {
+    width: -webkit-fill-available;
+    padding: 25px 15px;
+}
+
+.sidebarContainer a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.sidebarContainer li {
+    height: 80px;
+}
+
+.icon {
+    margin-right: 5px;
+    color: var(--white-color);
+}
+
+.liContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 25px;
+}
+
+.liContainer:hover {
+    background-color: var(--primary-color);
+}
+
+.selected {
+    background-color: var(--primary-color);
+  }
