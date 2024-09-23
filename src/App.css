@@ -1,0 +1,66 @@
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-schedule/styles/material.css";
+
+.app {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  transition: transform 0.3s ease-in-out;
+  z-index: 5;
+  height: 100%;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
+  padding-left: 190px;
+}
+
+.main {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.main::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: #acafd6;
+  border-radius: 6px;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: #d6d8f5;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+  }
+  .open {
+    transform: translateX(0);
+  }
+  .header-main {
+    padding-left: 0;
+  }
+}

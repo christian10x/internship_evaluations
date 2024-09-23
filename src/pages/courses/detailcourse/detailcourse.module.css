@@ -1,0 +1,102 @@
+.title {
+  padding-bottom: 25px;
+}
+
+.detail h3 {
+  font-weight: 500;
+}
+
+.infoContainer {
+  background-color: var(--white-color);
+  display: flex;
+  border-radius: 5px;
+  gap: 25px;
+}
+
+.info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.formula {
+  border: solid 1px var(--primary-color);
+  border-radius: 5px;
+  color: var(--primary-color);
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.formula p {
+  text-align: center;
+}
+
+.detailContainers {
+  padding-bottom: 35px;
+  width: 100%;
+}
+
+.leftright,
+.gradesContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+}
+
+.left {
+  width: 45%;
+}
+
+.grades {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.finalGrade {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  min-width: 150px;
+  padding: 10px;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+
+.finalGrade p {
+  padding: 0;
+}
+
+@media (max-width: 1090px) {
+  .leftright {
+    flex-direction: column;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+  .gradesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .grades {
+    width: 100%;
+  }
+}
+
+@media (max-width: 780px) {
+  .gradesContainer {
+    flex-direction: column;
+  }
+  .grades {
+    justify-content: space-between;
+    max-width: 100%;
+  }
+}
