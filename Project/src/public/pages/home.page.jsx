@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+// src/App.js
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../../App.css';
 import { Link } from 'react-router-dom';
 import CourseModal from '../components/courseModal.component';
@@ -7,26 +9,16 @@ import './Header.css';
 import './Profile.css';
 
 function App() {
-    const [enrolledCourses, setEnrolledCourses] = useState([]);
-
-    const addCourse = (course) => {
-        setEnrolledCourses([...enrolledCourses, course]);
-    };
-
-    const removeCourse = (index) => {
-        setEnrolledCourses(enrolledCourses.filter((_, i) => i !== index));
-    };
-
     return (
         <div className="container">
             <Header />
             <main>
                 <div className="left-panel">
                     <Profile />
-                    <EnrolledCourses enrolledCourses={enrolledCourses} removeCourse={removeCourse} />
+                    <EnrolledCourses />
                 </div>
                 <div className="right-panel">
-                    <Courses addCourse={addCourse} />
+                    <Courses />
                 </div>
             </main>
         </div>
@@ -46,23 +38,45 @@ const Header = () => (
     </header>
 );
 
-const Profile = () => (
-    <section className="profile">
-        <h2>MATRICULA ESTUDIANTE</h2>
-        <img src="https://res.cloudinary.com/djia8bsvr/image/upload/v1726960494/lgo85j9pcoqysduke6im.jpg" alt="Perfil" />
-        <div className="profile-info">
-            <p><strong>Nombres:</strong> Víctor Raúl Herrera Castillo</p>
-            <p><strong>Carrera:</strong> Ingeniería de Sistemas</p>
-            <p><strong>Ciclo:</strong> 2024-02</p>
-            <p><strong>Código alumno:</strong> U20201E188</p>
-            <p className="credits-title"><strong>Número de créditos:</strong></p>
-            <p className="credit-item">Obligatorios <span className="credit-box">124</span></p>
-            <p className="credit-item">Electivos    <span className="credit-box2">12</span></p>
-        </div>
-    </section>
-);
+const Profile = () => {
+    const [studentInfo, setStudentInfo] = useState(null);
 
-const EnrolledCourses = ({ enrolledCourses, removeCourse }) => {
+    useEffect(() => {
+        const fetchStudentInfo = async () => {
+            try {
+                const response = await axios.get('https://my-json-server.typicode.com/VictorHerrera10/VictorHerrera10-db/db');
+                setStudentInfo(response.data.student);
+            } catch (error) {
+                console.error('Error fetching student info:', error);
+            }
+        };
+
+        fetchStudentInfo();
+    }, []);
+
+    if (!studentInfo) {
+        return <div>Loading...</div>;
+    }
+
+    return (
+        <section className="profile">
+            <h2>MATRICULA ESTUDIANTE</h2>
+            <img src={studentInfo.photo} alt="Perfil" />
+            <div className="profile-info">
+                <p><strong>Nombres:</strong> {studentInfo.name}</p>
+                <p><strong>Carrera:</strong> {studentInfo.career}</p>
+                <p><strong>Ciclo:</strong> {studentInfo.cycle}</p>
+                <p><strong>Código alumno:</strong> U20201E188</p>
+                <p className="credits-title"><strong>Número de créditos:</strong></p>
+                <p className="credit-item">Obligatorios <span className="credit-box">{studentInfo.credits.obligatory}</span></p>
+                <p className="credit-item">Electivos <span className="credit-box2">{studentInfo.credits.electives}</span></p>
+            </div>
+        </section>
+    );
+};
+
+// Modificar el componente EnrolledCourses para incluir la funcionalidad de eliminar curso y mostrar el conteo
+const EnrolledCourses = () => {
     const [isSaveModalOpen, setIsSaveModalOpen] = useState(false);
 
     const studentInfo = {
@@ -73,6 +87,12 @@ const EnrolledCourses = ({ enrolledCourses, removeCourse }) => {
         mandatoryCredits: 124,
         electiveCredits: 12,
     };
+
+    const enrolledCourses = [
+        { name: 'Física 2 - SX569', credits: '4 créditos' },
+        { name: 'Cálculo 2 - SX569', credits: '3 créditos' },
+        { name: 'Fotografía - TF968', credits: '3 créditos' },
+    ];
 
     const handleSaveClick = () => {
         setIsSaveModalOpen(true);
@@ -86,10 +106,13 @@ const EnrolledCourses = ({ enrolledCourses, removeCourse }) => {
             <p className="credit-item">Electivos <span className="credit-box">{studentInfo.electiveCredits}</span></p>
             <div className="course-list">
                 {enrolledCourses.map((course, index) => (
-                    <div key={index} className="enrolled-course">
-                        <span>{course.name} - {course.section} ({course.isMandatory ? 'Obligatorio' : 'Electivo'})</span>
-                        <button onClick={() => removeCourse(index)}>Eliminar</button>
-                    </div>
+                    <CourseCard
+                        key={index}
+                        name={course.name}
+                        credits={course.credits}
+                        mode="Presencial"
+                        status="inscrito"
+                    />
                 ))}
             </div>
             <div className="buttons">
@@ -108,15 +131,28 @@ const EnrolledCourses = ({ enrolledCourses, removeCourse }) => {
     );
 };
 
-const Courses = ({ addCourse }) => {
+
+const Courses = () => {
     const [selectedCourse, setSelectedCourse] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [mandatoryCourses, setMandatoryCourses] = useState([]);
+    const [electiveCourses, setElectiveCourses] = useState([]);
 
-    const sectionsForCourses = {
-        'Física 2': ['Sección 1', 'Sección 2', 'Sección 3'],
-        'Cálculo 2': ['Sección 1', 'Sección 4'],
-        'Fotografía': ['Sección 2', 'Sección 3', 'Sección 5'],
-    };
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('https://my-json-server.typicode.com/VictorHerrera10/VictorHerrera10-db/db');
+                const courses = response.data.courses;
+                setMandatoryCourses(courses.filter(course => course.type === 'Obligatorio'));
+                setElectiveCourses(courses.filter(course => course.type === 'Electivo'));
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
 
     const handleCourseClick = (course) => {
         setSelectedCourse(course);
@@ -124,11 +160,7 @@ const Courses = ({ addCourse }) => {
     };
 
     const handleSelectSection = (section) => {
-        addCourse({
-            name: selectedCourse,
-            section: section,
-            isMandatory: selectedCourse !== 'Fotografía'
-        });
+        console.log(`Se seleccionó la ${section} para el curso ${selectedCourse}`);
         setIsModalOpen(false);
         setSelectedCourse(null);
     };
@@ -137,70 +169,74 @@ const Courses = ({ addCourse }) => {
         <section className="courses">
             <div className="course-card mandatory-courses">
                 <h2>CURSOS OBLIGATORIOS</h2>
-                <p>Estos cursos forman parte de tu plan de estudios y son necesarios para cumplir con los requisitos de tu carrera.</p>
+                <p>Estos cursos forman parte de tu plan de estudios y son necesarios para cumplir con los requisitos de
+                    tu carrera.</p>
                 <ul className="additional-info">
                     <li>Debes matricularte en todos los cursos obligatorios indicados para este ciclo.</li>
-                    <li>Si no seleccionas uno de estos cursos, el sistema no te permitirá avanzar en el proceso de matrícula.</li>
-                    <li>Recuerda revisar los horarios y seleccionar las secciones disponibles para evitar cruces de horarios.</li>
+                    <li>Si no seleccionas uno de estos cursos, el sistema no te permitirá avanzar en el proceso de
+                        matrícula.
+                    </li>
+                    <li>Recuerda revisar los horarios y seleccionar las secciones disponibles para evitar cruces de
+                        horarios.
+                    </li>
                 </ul>
             </div>
             <div className="course-list">
-                <CourseCard
-                    name="Física 2 - SX569"
-                    credits="4 créditos"
-                    status="pendiente"
-                    onClick={() => handleCourseClick('Física 2')}
-                />
-                <CourseCard
-                    name="Cálculo 2 - SX569"
-                    credits="3 créditos"
-                    status="inscrito"
-                    onClick={() => handleCourseClick('Cálculo 2')}
-                />
-                <CourseCard
-                    name="Fotografía - TF968"
-                    credits="3 créditos"
-                    status="inscrito"
-                    onClick={() => handleCourseClick('Fotografía')}
-                />
+                {mandatoryCourses.map((course) => (
+                    <CourseCard
+                        key={course.id}
+                        name={course.name}
+                        credits={course.credits}
+                        status={course.status}
+                        onClick={() => handleCourseClick(course)}
+                    />
+                ))}
             </div>
 
-            <div className="course-card elective-courses">
+            <div className="mt-3 course-card elective-courses">
                 <h2>CURSOS ELECTIVOS</h2>
-                <p>Estos cursos son opcionales y puedes elegirlos según tus intereses y necesidades.</p>
+                <p>Los cursos electivos te permiten explorar temas adicionales y complementar tu formación
+                    académica.</p>
                 <ul className="additional-info">
-                    <li>Puedes seleccionar los cursos electivos que desees, siempre y cuando cumplas con los requisitos previos.</li>
-                    <li>Recuerda revisar los horarios y seleccionar las secciones disponibles para evitar cruces de horarios.</li>
+                    <li>Puedes elegir libremente entre las opciones disponibles, según tu interés y los créditos
+                        disponibles en tu plan de estudios.
+                    </li>
+                    <li>Tienes la opción de seleccionar más de un curso electivo, pero asegúrate de que no haya
+                        conflictos de horario con tus cursos obligatorios.
+                    </li>
                 </ul>
             </div>
             <div className="course-list">
-                <CourseCard
-                    name="Fotografía - TF968"
-                    credits="3 créditos"
-                    status="disponible"
-                    onClick={() => handleCourseClick('Fotografía')}
-                />
+                {electiveCourses.map((course) => (
+                    <CourseCard
+                        key={course.id}
+                        name={course.name}
+                        credits={course.credits}
+                        status={course.status}
+                        onClick={() => handleCourseClick(course)}
+                    />
+                ))}
             </div>
 
             <CourseModal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
                 course={selectedCourse}
-                sections={sectionsForCourses[selectedCourse] || []}
+                sections={selectedCourse ? selectedCourse.sections : []}
                 onSelectSection={handleSelectSection}
             />
         </section>
     );
 };
 
-const CourseCard = ({ name, credits, status, onClick }) => (
-    <div style={{ display: 'flex', cursor: 'pointer', color: 'black', flexDirection: 'column' }} className={`course-card ${status}`} onClick={onClick}>
+const CourseCard = ({name, credits, status, onClick}) => (
+    <div style={{display: 'flex', cursor: 'pointer', color: 'black', flexDirection: 'column'}}
+         className={`course-card ${status}`} onClick={onClick}>
         <h5 className='fw-bold'>{name}</h5>
-        <span>{credits}</span>
+        <span>4 créditos</span>
         <span>4 secciones disponibles</span>
         <span>Presencial / Virtual</span>
         <span className={`status ${status}`}>{status}</span>
-        <button onClick={onClick}>Check</button>
     </div>
 );
 
