@@ -52,13 +52,13 @@ El objetivo es diseñar una plataforma responsiva que mejore la experiencia de l
 ---
 
 ## Visualización del Trabajo
-![Mockup del Proyecto](https://res.cloudinary.com/djia8bsvr/image/upload/v1727104296/iasbwxmx60ehqcozduu8.png)
+![Mockup del Proyecto](https://res.cloudinary.com/djia8bsvr/image/upload/v1727105122/esenfr3oydjutcfu17gl.png)
 
 ## Instalación
 Para clonar el proyecto e instalar las dependencias:
 
 ```bash
-git clone https://github.com/VictorHerrera10/MatriculaUTP.git
+git clone https://github.com/christian10x/internship_evaluations/tree/victor_herrera_front_end
 cd MatriculaUTP
 npm install
 npm start
