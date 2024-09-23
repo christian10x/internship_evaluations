@@ -1,0 +1,125 @@
+
+--Ejecutar cada uno por separado
+DROP DATABASE IF EXISTS retobackend;
+CREATE DATABASE retobackend;
+
+
+--Antes de todo esto, seleccionar la BD que se creó.
+DROP TABLE IF EXISTS asignacion_evaluador;
+DROP TABLE IF EXISTS notas;
+DROP TABLE IF EXISTS respuestas_alumno;
+DROP TABLE IF EXISTS preguntas;
+DROP TABLE IF EXISTS evaluacion;
+DROP TABLE IF EXISTS evaluador;
+DROP TABLE IF EXISTS alumno;
+CREATE TABLE alumno (
+    id_alumno SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE evaluador (
+    id_evaluador SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE evaluacion (
+    id_evaluacion SERIAL PRIMARY KEY,
+    curso VARCHAR(100),
+    nota_aprobatoria DECIMAL(5, 2),
+    estado VARCHAR(50)
+);
+
+CREATE TABLE preguntas (
+    id_pregunta SERIAL PRIMARY KEY,
+    enunciado TEXT NOT NULL,
+    peso DECIMAL(5, 2),
+    orden INT,
+    id_evaluacion INT,
+    FOREIGN KEY (id_evaluacion) REFERENCES evaluacion(id_evaluacion)
+);
+
+CREATE TABLE respuestas_alumno (
+    id_respuesta SERIAL PRIMARY KEY,
+    respuesta TEXT NOT NULL,
+    calificacion DECIMAL(5, 2),
+    id_alumno INT,
+    id_evaluacion INT,
+    id_pregunta INT,
+    FOREIGN KEY (id_alumno) REFERENCES alumno(id_alumno),
+    FOREIGN KEY (id_evaluacion) REFERENCES evaluacion(id_evaluacion),
+    FOREIGN KEY (id_pregunta) REFERENCES preguntas(id_pregunta)
+);
+
+CREATE TABLE notas (
+    id_nota SERIAL PRIMARY KEY,
+    promedio DECIMAL(5, 2),
+    resultado VARCHAR(50),    
+    estado VARCHAR(50),
+    id_alumno INT,
+    id_evaluacion INT,
+    FOREIGN KEY (id_alumno) REFERENCES alumno(id_alumno),
+    FOREIGN KEY (id_evaluacion) REFERENCES evaluacion(id_evaluacion)
+);
+
+CREATE TABLE asignacion_evaluador (
+    id_asignacion SERIAL PRIMARY KEY,
+    id_evaluacion INT,
+    id_evaluador INT,
+    FOREIGN KEY (id_evaluacion) REFERENCES evaluacion(id_evaluacion),
+    FOREIGN KEY (id_evaluador) REFERENCES evaluador(id_evaluador)
+);
+
+--Insertando valores ALUMNO
+INSERT INTO alumno(
+	id_alumno, nombre)
+	VALUES (101020, 'Alumno I');
+
+--Insertando valores EVALUACION
+INSERT INTO evaluacion(
+	id_evaluacion, curso, nota_aprobatoria, estado)
+	VALUES (20200033, 'Curso I', null, 'Activo');
+
+INSERT INTO evaluacion(
+	id_evaluacion, curso, nota_aprobatoria, estado)
+	VALUES (1, 'Prueba', null, 'Activo');
+
+--Insertando valores PREGUNTAS
+INSERT INTO preguntas(
+	id_pregunta, enunciado, peso, orden, id_evaluacion)
+	VALUES (1, 'Enun 1', null, 1, 20200033);
+
+INSERT INTO preguntas(
+	id_pregunta, enunciado, peso, orden, id_evaluacion)
+	VALUES (2, 'Enun 2', null, 2, 20200033);
+
+INSERT INTO preguntas(
+	id_pregunta, enunciado, peso, orden, id_evaluacion)
+	VALUES (3, 'Enun 3', null, 3, 20200033);
+	
+INSERT INTO preguntas(
+	id_pregunta, enunciado, peso, orden, id_evaluacion)
+	VALUES (4, 'Enun 4', null, 4, 20200033);
+
+INSERT INTO preguntas(
+	id_pregunta, enunciado, peso, orden, id_evaluacion)
+	VALUES (5, 'Enun 5', null, 5, 20200033);
+
+--Insertando valores EVALUADORES
+INSERT INTO evaluador(
+	id_evaluador, nombre)
+	VALUES (1, 'Eval I');
+
+INSERT INTO evaluador(
+id_evaluador, nombre)
+VALUES (2, 'Eval II');
+
+
+--Asignando evaluadores a las evaluaciones
+INSERT INTO asignacion_evaluador(
+	id_asignacion, id_evaluacion, id_evaluador)
+	VALUES (1, 1, 1);
+
+INSERT INTO asignacion_evaluador(
+	id_asignacion, id_evaluacion, id_evaluador)
+	VALUES (2, 20200033, 2);
+
