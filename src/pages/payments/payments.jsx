@@ -28,11 +28,11 @@ const Payments = () => {
   const getStatusClass = (statusId) => {
     switch (statusId) {
       case 1:
-        return "green-container"; // ID para pagos pagados
+        return "green-container";
       case 2:
-        return "red-container";   // ID para pagos vencidos
+        return "red-container";
       case 3:
-        return "orange-container"; // ID para pagos pendientes
+        return "orange-container";
       default:
         return '';
     }
@@ -70,13 +70,11 @@ const Payments = () => {
       <h1>MIS PAGOS</h1>
       <div className={styles.section}>
       <h3>Pagos Pagados</h3>
-      <div className={styles.table}>
       <DataTable
         columns={paidColumns}
         data={paidPayments}
       />
 
-      </div>
       </div>
       <div className={styles.totalContainer}>
         <div className={styles.totalDebt}>

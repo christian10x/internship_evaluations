@@ -1,21 +1,16 @@
 import { Agenda, Day, Inject, Month, ScheduleComponent, Week, WorkWeek } from "@syncfusion/ej2-react-schedule";
 
-const Schedule = () => {
-    const data = [
-        {
-          Id: 1,
-          Subject: 'Meeting',
-          StartTime: new Date(2023, 1, 15, 10, 0),
-          EndTime: new Date(2023, 1, 15, 12, 30),
-        },
-      ];
+const Schedule = ({schedule}) => {
+    
       return (
         <ScheduleComponent
         
-          selectedDate={new Date(2023, 1, 15)}
+          selectedDate={new Date(2024, 8, 23)}
           eventSettings={{
-            dataSource: data,
+            dataSource: schedule,
           }}
+          startHour="07:00"
+      endHour="23:00"
         >
           <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
         </ScheduleComponent>

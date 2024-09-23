@@ -6,7 +6,6 @@ import { IconUserCircle } from '@tabler/icons-react';
 const Header = ({onMenuClick }) => {
 
 
-
   return (
     <div className={styles.header}>
       <div className={styles.iconMenu} >

@@ -4,6 +4,7 @@ import { getUser } from "../../services/user/user";
 import { IconMapPin } from "@tabler/icons-react";
 import photo from "../../assets/photo.jpg";
 import { getLastGrades } from "../../services/grades/grade";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const {
@@ -24,7 +25,7 @@ const Home = () => {
     queryFn: getLastGrades,
   });
 
-  if (isLoading || isLoading2) return <p>Cargando cursos...</p>;
+  if (isLoading || isLoading2) return <p>Cargando home...</p>;
 
   if (error || error2) return <p>Error: {error.message}</p>;
 
@@ -64,7 +65,10 @@ const Home = () => {
                     </div>
                   </div>
                   <div>
+                  <Link to={`/horario`}>
+                  
                     <button className="button-primary">Ver horario</button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -83,7 +87,9 @@ const Home = () => {
                   <p id="red">Cuotas vencidas: {user.account.expire}</p>
                 </div>
                 <div>
+                <Link to={`/pagos`}>
                   <button className="button-primary">Ver estado</button>
+                  </Link>
                 </div>
               </div>
             </div>
