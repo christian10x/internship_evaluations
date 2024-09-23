@@ -1,5 +1,5 @@
 // src/pages/CoursesPage.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Pie } from 'react-chartjs-2';
 import { Chart, ArcElement } from 'chart.js'; // Importamos el ArcElement
 import 'chart.js/auto'; // Importar para asegurar los componentes de gráficos se carguen correctamente
@@ -18,6 +18,14 @@ const courses = [
 const CoursesPage = () => {
   const [expandedCourse, setExpandedCourse] = useState(null); // Estado para el toggle
   const [selectedCourse, setSelectedCourse] = useState(null); // Estado para el gráfico
+  const [averageAttendance, setAverageAttendance] = useState(0); // Estado para la asistencia promedio
+
+  // Calcular el promedio de asistencia al cargar la página
+  useEffect(() => {
+    const totalAttendance = courses.reduce((acc, course) => acc + course.attendance, 0);
+    const average = totalAttendance / courses.length;
+    setAverageAttendance(average); // Establecer el promedio de asistencia
+  }, []);
 
   const toggleCourse = (id) => {
     if (expandedCourse === id) {
@@ -42,7 +50,17 @@ const CoursesPage = () => {
           },
         ],
       }
-    : null;
+    : {
+        labels: ['Asistencias', 'Faltas'],
+        datasets: [
+          {
+            label: '% Asistencias promedio',
+            data: [averageAttendance, 100 - averageAttendance],
+            backgroundColor: ['#36A2EB', '#FF6384'],
+            hoverBackgroundColor: ['#36A2EB', '#FF6384'],
+          },
+        ],
+      };
 
   return (
     <div className="container">
@@ -79,12 +97,10 @@ const CoursesPage = () => {
 
         {/* Sección derecha para el gráfico de torta */}
         <div className="attendance-chart">
-          {selectedCourse && attendanceData && (
-            <div>
-              <h2>Asistencia en {selectedCourse.title}</h2>
-              <Pie data={attendanceData} />
-            </div>
-          )}
+          <div>
+            <h2>{selectedCourse ? `Asistencia en ${selectedCourse.title}` : 'Asistencia promedio'}</h2>
+            <Pie data={attendanceData} />
+          </div>
         </div>
       </div>
     </div>

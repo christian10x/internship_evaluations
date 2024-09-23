@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/home';
 import CalendarPage from './pages/calendar';
 import CoursesPage from './pages/courses';
-import CourseDetailsPage from './pages/detalleCurso';
+import PaymentsPage from './pages/payments';
+
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/courses" element={<CoursesPage />} />
-        <Route path="/course/:id" element={<CourseDetailsPage />} />
+        <Route path="/payments" element={<PaymentsPage />} />
+        
       </Routes>
     </Router>
   );

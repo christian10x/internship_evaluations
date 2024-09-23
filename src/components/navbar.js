@@ -24,10 +24,10 @@ function Navbar() {
                 <p>Cursos</p>
             </Link>
 
-            <a href="pagos.html" class="navbar-item">
+            <Link to="/payments" class="navbar-item">
                 <i class="fa-solid fa-house"></i>
                 <p>Pagos</p>
-            </a>
+            </Link>
         </menu>
 
     );
