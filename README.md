@@ -1,6 +1,6 @@
 <tr>
   <div align='center'>
-    <img src="[https://res.cloudinary.com/djia8bsvr/image/upload/v1727060006/crwtyws8oaford8wwqd7.png]"width="150" height="150">
+    <img src="https://res.cloudinary.com/djia8bsvr/image/upload/v1727060006/crwtyws8oaford8wwqd7.png"width="150" height="150">
     </div>
 </tr>
  <h1 align="center">Sistema de Matrícula en Línea - UTP
