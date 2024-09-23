@@ -68,6 +68,5 @@ Para clonar el proyecto e instalar las dependencias:
 
 ```bash
 git clone https://github.com/christian10x/internship_evaluations/tree/victor_herrera_front_end
-cd MatriculaUTP
 npm install
 npm start
