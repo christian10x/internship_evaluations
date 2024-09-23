@@ -9,7 +9,7 @@
 <p align="center">
 
 ## Proyecto: Desarrollo de Ventanas para Matrícula en Línea
-Este proyecto se enfoca en la creación de una plataforma web moderna y responsiva para la Universidad Tecnológica del Perú (UTP), facilitando la selección de cursos y secciones de manera eficiente y amigable para los estudiantes.
+Este proyecto se enfoca en la creación de una plataforma web moderna y responsiva para la Universidad Tecnológica del Perú (UTP), facilitando la selección de cursos y secciones de manera eficiente y amigable para los estudiantes aplicando metodologias Agiles.
 
 ### **Postulante**
 
@@ -39,9 +39,18 @@ El objetivo es diseñar una plataforma responsiva que mejore la experiencia de l
 
 ## Tecnologías Utilizadas
 - **Frontend:** React JS
-- **Backend:** Mock API
+- **Backend:** My Json Server
 - **Diseño UX/UI:** Figma
 - **Gestión de Proyecto:** GitHub (GitFlow)
+
+## Librerías principales utilizadas
+o	dompurify: 3.1.6
+o	quill-table: 1.0.0
+o	react-dom: 18.3.1
+o	react-icons: 5.3.0
+o	react-quill: 2.0.0
+o	react-router-dom: 6.26.2
+
 
 ## Funcionalidades Principales
 - **Selección de Cursos:** Listado de cursos obligatorios y opcionales.
