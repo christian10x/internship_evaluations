@@ -4,13 +4,13 @@ import SocioComercialGral from "./SocioComercialGral.js";
 import Sedes from "./Sedes.js";
 
 const SocioAlumno = sequelize.define(
-  "SocioAlumno",
+  "SocioAlumnos",
   {
     SOCIO_ALUMNO_ID: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: false,
     },
     SOCIO_ID: {
       type: DataTypes.INTEGER,

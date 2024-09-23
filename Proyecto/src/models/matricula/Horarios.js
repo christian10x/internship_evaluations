@@ -8,7 +8,7 @@ const Horarios = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: false,
     },
     DIA: {
       type: DataTypes.STRING(18),

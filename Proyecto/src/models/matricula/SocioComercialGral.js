@@ -8,7 +8,7 @@ const SocioComercialGral = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: false,
     },
     SOCIO_NOMBRES: {
       type: DataTypes.STRING(250),

@@ -3,7 +3,7 @@ import { sequelize } from "./database/database.js";
 
 async function intit() {
   try {
-    await sequelize.sync({ alter: true });
+    await sequelize.sync({alter:true});
     app.listen(app.get("port"), () => {
       console.log("Server on port", app.get("port"));
     });

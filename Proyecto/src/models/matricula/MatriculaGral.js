@@ -4,7 +4,7 @@ import SocioAlumno from "./SocioAlumno.js";
 import Periodos from "./Periodos.js";
 
 const MatriculaGral = sequelize.define(
-  "MatriculaGral",
+  "MatriculaGrals",
   {
     MATRICULA_ID: {
       type: DataTypes.INTEGER,

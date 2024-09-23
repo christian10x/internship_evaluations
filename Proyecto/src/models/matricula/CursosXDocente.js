@@ -10,7 +10,7 @@ const CursosXDocente = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: false,
     },
     SOCIO_DOCENTE_ID: {
       type: DataTypes.INTEGER,

@@ -9,7 +9,7 @@ const Cursos = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: false,
     },
     CURSO_NOMBRE: {
       type: DataTypes.STRING(250),

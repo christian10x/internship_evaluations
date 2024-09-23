@@ -4,13 +4,13 @@ import CursosXDocente from "./CursosXDocente.js";
 import Horarios from "./Horarios.js";
 
 const CursosXDocenteXHorario = sequelize.define(
-  "CursosXDocenteXHorario",
+  "CursosXDocenteXHorarios",
   {
     CURSO_X_DOCENTE_X_HORARIO_ID: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: false,
     },
     CURSO_X_DOCENTE_ID: {
       type: DataTypes.INTEGER,

@@ -2,13 +2,13 @@ import { DataTypes } from "sequelize";
 import { sequelize } from "../../database/database.js";
 
 const TiposCurso = sequelize.define(
-  "TiposCurso",
+  "TiposCursos",
   {
     TIPO_CURSO_ID: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: false,
     },
     TIPO_CURSO_NOMBRE: {
       type: DataTypes.STRING(250),

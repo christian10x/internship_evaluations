@@ -8,7 +8,7 @@ const Sedes = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: false,
     },
     SEDE_NOMBRE: {
       type: DataTypes.STRING(250),
