@@ -36,10 +36,10 @@ El objetivo es diseñar una plataforma responsiva que mejore la experiencia de l
   [Base de datos mock para pruebas](https://my-json-server.typicode.com/VictorHerrera10/VictorHerrera10-db) utilizada para manejar los cursos, secciones y usuarios.
 
 - **Documentacion completa**  
-  [Base de datos mock para pruebas](https://docs.google.com/document/d/1goSHyJhK_fLRW6kL0ITh-gvUXZ2ER8S_/edit?usp=sharing&ouid=102603113869228574044&rtpof=true&sd=true) utilizada para manejar la informacion completa de todo el programa y sea escalable.
+  [Documento explicante a detalle el proyecto elaborado](https://docs.google.com/document/d/1goSHyJhK_fLRW6kL0ITh-gvUXZ2ER8S_/edit?usp=sharing&ouid=102603113869228574044&rtpof=true&sd=true) utilizada para manejar la informacion completa de todo el programa y sea escalable.
 
 - **Trello - Gestion de tareas**  
-  [Base de datos mock para pruebas](https://trello.com/invite/b/66f193e6ed857af47cd66550/ATTIb0670ab931940aa837851defb1a54090AD8E79B8/matricula-linea) utilizada para manejar los task para trabajar la plataforma.
+  [Tablero de actividades a cumplir](https://trello.com/invite/b/66f193e6ed857af47cd66550/ATTIb0670ab931940aa837851defb1a54090AD8E79B8/matricula-linea) utilizada para manejar los task para trabajar la plataforma.
   
 
 ---
