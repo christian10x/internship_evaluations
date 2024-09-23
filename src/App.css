@@ -6,7 +6,30 @@
     font-family: 'Lato', 'Helvetica Neue',;
 }
 
-.main_content{
+.content{
     padding-left: 80px;
 }
 
+.main_content{
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    gap:15px;
+}
+
+.izquierda{
+    width: 50%;
+}
+
+.ciclo{
+    display: flex;
+    flex-direction: row;
+}
+
+.ciclo_contente{
+    width: 140px;
+}
+
+.horario{
+    width: 100%;
+}
