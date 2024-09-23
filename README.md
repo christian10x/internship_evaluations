@@ -4,6 +4,7 @@
 
 - Node.js >= 20.x
 - PostgreSQL >= 16.x
+- npm >= 8.x
 
 ## Tecnologías
 
@@ -16,7 +17,13 @@
 
 ## Pasos de Configuración
 
-1. Copia el archivo `.env.example` a `.env` y rellena todas las variables de entorno necesarias.
+1. Clona el repositorio.
+
+   ```bash
+    git clone <URL_REPOSITORIO>
+   ```
+
+2. Copia el archivo `.env.example` a `.env` y rellena todas las variables de entorno necesarias.
 
    ```bash
    cp .env.example .env
@@ -37,42 +44,48 @@
     JWT_SECRET="PALABRA_SECRETA"
    ```
 
-2. Instala las dependencias del proyecto.
+3. Instala las dependencias del proyecto.
 
    ```bash
     npm install
    ```
 
-3. Crea las migraciones de la base de datos.
+4. Crea las migraciones de la base de datos.
 
    ```bash
     npm run db:generate
    ```
 
-4. Ejecuta las migraciones de la base de datos.
+5. Ejecuta las migraciones de la base de datos.
 
    ```bash
     npm run db:migrate
    ```
 
-5. Ejecuta el seeder de la base de datos.
+6. Ejecuta el seeder de la base de datos.
 
    ```bash
     npm run db:seed
    ```
 
-6. Inicia el servidor de desarrollo.
+7. Inicia el servidor de desarrollo.
 
    ```bash
     npm run start:dev
    ```
 
-7. Abre tu navegador y navega a `http://localhost:4000/api/v1/`.
+8. Abre tu navegador y navega a `http://localhost:4000/api/v1/`.
 
-8. La documentación de la API estará disponible en `http://localhost:4000/api/v1/docs`.
+9. La documentación de la API estará disponible en `http://localhost:4000/api/v1/docs`.
 
-9. La Colección de API's estará disponible en la carpeta `API - Xpedition Trainee UTP` en la raíz del proyecto.
-   Se recomienda importar la colección en [bruno](https://www.usebruno.com) para probar las API's.
+10. La Colección de API's estará disponible en la carpeta `API - Xpedition Trainee UTP` en la raíz del proyecto.
+    Se recomienda importar la colección en [bruno](https://www.usebruno.com) para probar las API's.
+
+11. Aplicación desplegada en [render](https://render.com).
+
+```bash
+ https://api-xpedition-trainee-utp.onrender.com/api/v1/
+```
 
 ## Documentación
 
